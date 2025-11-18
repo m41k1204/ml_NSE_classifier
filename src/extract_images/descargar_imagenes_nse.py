@@ -14,7 +14,7 @@ import os
 from dotenv import load_dotenv
 from concurrent.futures import ThreadPoolExecutor
 import threading
-from distritos_nse import (
+from src.extract_images.distritos_nse import (
     obtener_nse_por_coordenada,
     obtener_todos_distritos,
     LIMA_BOUNDS,
@@ -76,7 +76,7 @@ def descargar_red_vial_lima(network_type="drive"):
 
     try:
         # Límites de Lima Metropolitana
-        from distritos_nse import LIMA_BOUNDS
+        from src.extract_images.distritos_nse import LIMA_BOUNDS
 
         lat_min = LIMA_BOUNDS["lat_min"]
         lat_max = LIMA_BOUNDS["lat_max"]

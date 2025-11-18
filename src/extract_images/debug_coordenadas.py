@@ -1,9 +1,14 @@
 """
 Script para debuggear por qué no se encuentran coordenadas válidas
 """
+
 import osmnx as ox
 import random
-from distritos_nse import obtener_nse_por_coordenada, LIMA_BOUNDS, DISTRITOS_NSE
+from src.extract_images.distritos_nse import (
+    obtener_nse_por_coordenada,
+    LIMA_BOUNDS,
+    DISTRITOS_NSE,
+)
 
 print("=" * 70)
 print("DEBUG: Verificando bounding boxes y coordenadas")
@@ -17,10 +22,10 @@ print(f"   lon_max: {LIMA_BOUNDS['lon_max']}")
 
 print("\n2. Descargando red vial...")
 bbox = (
-    LIMA_BOUNDS['lon_min'],
-    LIMA_BOUNDS['lat_min'],
-    LIMA_BOUNDS['lon_max'],
-    LIMA_BOUNDS['lat_max'],
+    LIMA_BOUNDS["lon_min"],
+    LIMA_BOUNDS["lat_min"],
+    LIMA_BOUNDS["lon_max"],
+    LIMA_BOUNDS["lat_max"],
 )
 graph = ox.graph_from_bbox(bbox, network_type="drive")
 print(f"   ✅ Red descargada: {len(graph.nodes)} nodos")
@@ -33,7 +38,9 @@ for i, (node_id, data) in enumerate(muestra, 1):
     lat = data["y"]
     lon = data["x"]
     distrito, nse = obtener_nse_por_coordenada(lat, lon)
-    print(f"   Punto {i}: lat={lat:.6f}, lon={lon:.6f} -> distrito={distrito}, nse={nse}")
+    print(
+        f"   Punto {i}: lat={lat:.6f}, lon={lon:.6f} -> distrito={distrito}, nse={nse}"
+    )
 
 print("\n4. Verificando algunos bounding boxes de distritos:")
 for i, (distrito, zonas) in enumerate(list(DISTRITOS_NSE.items())[:3]):
