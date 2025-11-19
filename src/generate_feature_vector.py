@@ -32,18 +32,24 @@ transform = transforms.Compose(
 
 
 def load_images_from_folders(base_path):
-    """Carga rutas desde carpetas de categorías"""
+    """Carga rutas desde carpetas de categorías Alto, Medio y Bajo"""
     base_path = Path(base_path)
     image_paths = []
     labels = []
     categories = []
 
-    category_folders = sorted([d for d in base_path.iterdir() if d.is_dir()])
+    # Definir las categorías en orden específico
+    category_names = ["Alto", "Medio", "Bajo"]
 
-    print(f"\n📁 Categorías encontradas:")
-    for idx, folder in enumerate(category_folders):
-        cat_name = folder.name
-        images = list(folder.glob("*.jpg")) + list(folder.glob("*.png"))
+    print(f"\n📁 Categorías a procesar:")
+    for idx, cat_name in enumerate(category_names):
+        cat_folder = base_path / cat_name
+
+        if not cat_folder.exists():
+            print(f"   ⚠️  {cat_name} - Carpeta no encontrada, saltando...")
+            continue
+
+        images = list(cat_folder.glob("*.jpg")) + list(cat_folder.glob("*.png"))
 
         print(f"   {idx}: {cat_name} - {len(images)} imágenes")
 
@@ -132,8 +138,8 @@ if __name__ == "__main__":
     print("🏙️  EXTRACCIÓN DE FEATURES - NIVEL SOCIOECONÓMICO")
     print(f"{'='*60}\n")
 
-    # Cargar datos
-    base_path = "images"
+    # Cargar datos desde final_images (Alto, Medio, Bajo)
+    base_path = "../final_images"
     image_paths, labels, categories = load_images_from_folders(base_path)
 
     # Estimación de tiempo
