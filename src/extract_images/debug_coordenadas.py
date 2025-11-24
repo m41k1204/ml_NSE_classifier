@@ -1,7 +1,3 @@
-"""
-Script para debuggear por qué no se encuentran coordenadas válidas
-"""
-
 import osmnx as ox
 import random
 from src.extract_images.distritos_nse import (

@@ -1,10 +1,5 @@
-"""
-Script para verificar el tamaño de los bounding boxes.
-"""
-
 import math
 
-# Todas las urbanizaciones
 URBANIZACIONES = {
     "Arequipa - Alto - Cayma Norte": (-16.393344, -16.278875, -71.556694, -71.447529),
     "Arequipa - Alto - Cayma Sur": (-16.278875, -16.164406, -71.447529, -71.338364),
@@ -30,20 +25,7 @@ URBANIZACIONES = {
 
 
 def calcular_area_km2(bbox):
-    """
-    Calcula el área aproximada de un bounding box en km².
-
-    Args:
-        bbox: Tupla (lat_min, lat_max, lon_min, lon_max)
-
-    Returns:
-        float: Área en km²
-    """
     lat_min, lat_max, lon_min, lon_max = bbox
-
-    # Aproximación usando la fórmula de Haversine
-    # 1 grado de latitud ≈ 111 km
-    # 1 grado de longitud ≈ 111 km * cos(latitud)
 
     lat_center = (lat_min + lat_max) / 2
 
@@ -66,7 +48,6 @@ def main():
         area = calcular_area_km2(bbox)
         resultados.append((nombre, area, bbox))
 
-    # Ordenar por área (de mayor a menor)
     resultados.sort(key=lambda x: x[1], reverse=True)
 
     print(f"{'Urbanización':<50} {'Área (km²)':<15}")
@@ -76,7 +57,6 @@ def main():
         nivel = "🔴 MUY GRANDE" if area > 200 else "🟡 GRANDE" if area > 50 else "🟢 OK"
         print(f"{nombre:<50} {area:>10.2f} km²    {nivel}")
 
-    # Resumen
     print("\n" + "=" * 80)
     print("📊 RESUMEN")
     print("=" * 80)

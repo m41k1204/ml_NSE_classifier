@@ -1,11 +1,5 @@
-"""
-Script para probar si urbanizaciones específicas existen en OpenStreetMap
-y pueden ser usadas con OSMnx.
-"""
-
 import osmnx as ox
 
-# Candidatos de urbanizaciones para probar
 URBANIZACIONES_TEST = {
     "AREQUIPA - Alto": [
         "Cayma, Arequipa, Peru",
@@ -69,16 +63,6 @@ URBANIZACIONES_TEST = {
 
 
 def probar_lugar(lugar, timeout=30):
-    """
-    Prueba si un lugar existe en OpenStreetMap y puede ser usado con OSMnx.
-
-    Args:
-        lugar: Nombre del lugar a probar
-        timeout: Tiempo máximo de espera en segundos
-
-    Returns:
-        tuple: (existe, n_nodos, mensaje)
-    """
     try:
         graph = ox.graph_from_place(lugar, network_type="drive")
         n_nodos = len(graph.nodes)
@@ -114,7 +98,6 @@ def main():
             if existe:
                 resultados[categoria].append((lugar, n_nodos))
 
-    # Resumen final
     print("\n" + "=" * 80)
     print("📊 RESUMEN - LUGARES QUE FUNCIONAN")
     print("=" * 80 + "\n")
@@ -127,7 +110,6 @@ def main():
         else:
             print("   ⚠️  Ningún lugar encontrado")
 
-    # Recomendaciones
     print("\n" + "=" * 80)
     print("💡 RECOMENDACIONES PARA EL SCRIPT FINAL")
     print("=" * 80 + "\n")
@@ -135,7 +117,6 @@ def main():
     for categoria, lugares_ok in resultados.items():
         if lugares_ok and len(lugares_ok) >= 2:
             print(f"\n{categoria}:")
-            # Tomar los 2 primeros que funcionan
             for i, (lugar, n_nodos) in enumerate(lugares_ok[:2], 1):
                 print(f"   {i}. {lugar}")
 

@@ -1,10 +1,5 @@
-"""
-Script para probar la descarga de red vial con los bounding boxes.
-"""
-
 import osmnx as ox
 
-# Probar algunos bounding boxes
 TESTS = [
     ("Cayma Norte", (-16.393344, -16.278875, -71.556694, -71.447529)),
     ("Bustamante Oeste", (-16.455307, -16.433064, -71.547559, -71.524350)),
@@ -14,7 +9,6 @@ TESTS = [
 
 
 def test_bbox_download(nombre, bbox):
-    """Prueba descargar red vial de un bounding box."""
     lat_min, lat_max, lon_min, lon_max = bbox
 
     print(f"\n{'='*70}")
@@ -22,7 +16,6 @@ def test_bbox_download(nombre, bbox):
     print(f"Bbox: lat=[{lat_min:.6f}, {lat_max:.6f}], lon=[{lon_min:.6f}, {lon_max:.6f}]")
 
     try:
-        # Verificar que el bbox tenga sentido
         if lat_min >= lat_max:
             print(f"❌ ERROR: lat_min ({lat_min}) >= lat_max ({lat_max})")
             return None
@@ -31,8 +24,6 @@ def test_bbox_download(nombre, bbox):
             print(f"❌ ERROR: lon_min ({lon_min}) >= lon_max ({lon_max})")
             return None
 
-        # Probar descarga
-        # ox.graph_from_bbox usa una tupla bbox=(north, south, east, west)
         print(f"Descargando con ox.graph_from_bbox...")
         print(f"   bbox=(north={lat_max}, south={lat_min}, east={lon_max}, west={lon_min})")
 
@@ -65,7 +56,6 @@ def main():
         graph = test_bbox_download(nombre, bbox)
         resultados.append((nombre, bbox, graph is not None))
 
-    # Resumen
     print("\n" + "=" * 70)
     print("📊 RESUMEN")
     print("=" * 70)

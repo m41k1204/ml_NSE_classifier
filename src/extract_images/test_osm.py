@@ -152,7 +152,6 @@ def main():
 
 
 if __name__ == "__main__":
-    # Verificar que se configuró la API key
     if API_KEY == "TU_API_KEY_AQUI":
         print("\n❌ ERROR: Debes configurar tu API_KEY primero")
         print("\n📝 Edita el archivo y cambia esta línea:")

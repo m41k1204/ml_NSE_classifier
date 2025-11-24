@@ -1,13 +1,7 @@
-"""
-Script para obtener bounding boxes de distritos desde OpenStreetMap/Nominatim
-y proponer subdivisiones para urbanizaciones específicas.
-"""
-
 import requests
 import time
 import json
 
-# Distritos seleccionados (uno por categoría y ciudad)
 DISTRITOS_SELECCIONADOS = {
     "AREQUIPA": {
         "Alto": "Cayma, Arequipa, Peru",
@@ -28,15 +22,6 @@ DISTRITOS_SELECCIONADOS = {
 
 
 def get_bounding_box_from_nominatim(place_name):
-    """
-    Obtiene el bounding box de un lugar usando la API de Nominatim.
-
-    Args:
-        place_name: Nombre del lugar (ej: "Cayma, Arequipa, Peru")
-
-    Returns:
-        dict: Información del bounding box o None si falla
-    """
     url = "https://nominatim.openstreetmap.org/search"
     params = {"q": place_name, "format": "json", "limit": 1, "addressdetails": 1}
 
@@ -52,7 +37,6 @@ def get_bounding_box_from_nominatim(place_name):
             bbox = result.get("boundingbox", [])
 
             if len(bbox) == 4:
-                # Nominatim devuelve: [min_lat, max_lat, min_lon, max_lon]
                 return {
                     "place": place_name,
                     "lat_min": float(bbox[0]),
@@ -71,16 +55,6 @@ def get_bounding_box_from_nominatim(place_name):
 
 
 def subdivide_bbox(bbox_info, n_divisions=2):
-    """
-    Subdivide un bounding box en N partes para crear urbanizaciones.
-
-    Args:
-        bbox_info: Dict con lat_min, lat_max, lon_min, lon_max
-        n_divisions: Número de divisiones por lado (2 = 4 subdivisiones)
-
-    Returns:
-        list: Lista de subdivisiones con sus bounding boxes
-    """
     lat_min = bbox_info["lat_min"]
     lat_max = bbox_info["lat_max"]
     lon_min = bbox_info["lon_min"]
@@ -136,7 +110,6 @@ def main():
                       f"{bbox_info['lon_min']:.6f}, {bbox_info['lon_max']:.6f}]")
                 print(f"         Centro: ({bbox_info['center_lat']:.6f}, {bbox_info['center_lon']:.6f})")
 
-                # Subdividir en 4 zonas (2x2)
                 subdivisiones = subdivide_bbox(bbox_info, n_divisions=2)
                 bbox_info["subdivisiones"] = subdivisiones
 
@@ -145,17 +118,14 @@ def main():
                 print("❌ No encontrado")
                 resultados[ciudad][categoria] = None
 
-            # Respetar rate limit de Nominatim (máx 1 req/seg)
             time.sleep(1.5)
 
-    # Guardar resultados en JSON
     output_file = "bounding_boxes.json"
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(resultados, f, indent=2, ensure_ascii=False)
 
     print(f"\n💾 Resultados guardados en: {output_file}")
 
-    # Mostrar propuesta de urbanizaciones
     print("\n" + "=" * 80)
     print("💡 PROPUESTA DE URBANIZACIONES (2 POR DISTRITO)")
     print("=" * 80 + "\n")
@@ -166,9 +136,8 @@ def main():
             if bbox_info and "subdivisiones" in bbox_info:
                 print(f"\n  {categoria} - {bbox_info['place'].split(',')[0]}:")
 
-                # Seleccionar 2 subdivisiones (esquinas opuestas para máxima variedad)
                 subs = bbox_info["subdivisiones"]
-                seleccionadas = [subs[0], subs[-1]]  # Primera y última zona
+                seleccionadas = [subs[0], subs[-1]]
 
                 for idx, sub in enumerate(seleccionadas, 1):
                     print(f"    Urbanización {idx} ({sub['zona']}):")
