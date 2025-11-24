@@ -1,0 +1,368 @@
+{
+  "AREQUIPA": {
+    "Alto": {
+      "place": "Cayma, Arequipa, Peru",
+      "lat_min": -16.3933439,
+      "lat_max": -16.164406,
+      "lon_min": -71.556694,
+      "lon_max": -71.3383636,
+      "center_lat": -16.2793942,
+      "center_lon": -71.4603116,
+      "display_name": "Cayma, Arequipa, Perú",
+      "subdivisiones": [
+        {
+          "zona": "Zona_11",
+          "lat_min": -16.3933439,
+          "lat_max": -16.278874950000002,
+          "lon_min": -71.556694,
+          "lon_max": -71.44752879999999
+        },
+        {
+          "zona": "Zona_12",
+          "lat_min": -16.3933439,
+          "lat_max": -16.278874950000002,
+          "lon_min": -71.44752879999999,
+          "lon_max": -71.3383636
+        },
+        {
+          "zona": "Zona_21",
+          "lat_min": -16.278874950000002,
+          "lat_max": -16.164406,
+          "lon_min": -71.556694,
+          "lon_max": -71.44752879999999
+        },
+        {
+          "zona": "Zona_22",
+          "lat_min": -16.278874950000002,
+          "lat_max": -16.164406,
+          "lon_min": -71.44752879999999,
+          "lon_max": -71.3383636
+        }
+      ]
+    },
+    "Medio": {
+      "place": "Jose Luis Bustamante y Rivero, Arequipa, Peru",
+      "lat_min": -16.455307,
+      "lat_max": -16.4108211,
+      "lon_min": -71.5475594,
+      "lon_max": -71.5011398,
+      "center_lat": -16.4331715,
+      "center_lon": -71.5233141,
+      "display_name": "José Luis Bustamante y Rivero, Arequipa, Perú",
+      "subdivisiones": [
+        {
+          "zona": "Zona_11",
+          "lat_min": -16.455307,
+          "lat_max": -16.43306405,
+          "lon_min": -71.5475594,
+          "lon_max": -71.5243496
+        },
+        {
+          "zona": "Zona_12",
+          "lat_min": -16.455307,
+          "lat_max": -16.43306405,
+          "lon_min": -71.5243496,
+          "lon_max": -71.5011398
+        },
+        {
+          "zona": "Zona_21",
+          "lat_min": -16.43306405,
+          "lat_max": -16.4108211,
+          "lon_min": -71.5475594,
+          "lon_max": -71.5243496
+        },
+        {
+          "zona": "Zona_22",
+          "lat_min": -16.43306405,
+          "lat_max": -16.4108211,
+          "lon_min": -71.5243496,
+          "lon_max": -71.5011398
+        }
+      ]
+    },
+    "Bajo": {
+      "place": "Cerro Colorado, Arequipa, Peru",
+      "lat_min": -16.4075684,
+      "lat_max": -16.1890877,
+      "lon_min": -71.6519894,
+      "lon_max": -71.4993535,
+      "center_lat": -16.2979991,
+      "center_lon": -71.573948,
+      "display_name": "Cerro Colorado, Arequipa, Perú",
+      "subdivisiones": [
+        {
+          "zona": "Zona_11",
+          "lat_min": -16.4075684,
+          "lat_max": -16.298328050000002,
+          "lon_min": -71.6519894,
+          "lon_max": -71.57567145
+        },
+        {
+          "zona": "Zona_12",
+          "lat_min": -16.4075684,
+          "lat_max": -16.298328050000002,
+          "lon_min": -71.57567145,
+          "lon_max": -71.4993535
+        },
+        {
+          "zona": "Zona_21",
+          "lat_min": -16.298328050000002,
+          "lat_max": -16.1890877,
+          "lon_min": -71.6519894,
+          "lon_max": -71.57567145
+        },
+        {
+          "zona": "Zona_22",
+          "lat_min": -16.298328050000002,
+          "lat_max": -16.1890877,
+          "lon_min": -71.57567145,
+          "lon_max": -71.4993535
+        }
+      ]
+    }
+  },
+  "TRUJILLO": {
+    "Alto": {
+      "place": "Victor Larco Herrera, Trujillo, Peru",
+      "lat_min": -8.1622933,
+      "lat_max": -8.1186544,
+      "lon_min": -79.0702891,
+      "lon_max": -79.0267821,
+      "center_lat": -8.1403904,
+      "center_lon": -79.044612,
+      "display_name": "Víctor Larco Herrera, Trujillo, La Libertad, 13009, Perú",
+      "subdivisiones": [
+        {
+          "zona": "Zona_11",
+          "lat_min": -8.1622933,
+          "lat_max": -8.14047385,
+          "lon_min": -79.0702891,
+          "lon_max": -79.04853560000001
+        },
+        {
+          "zona": "Zona_12",
+          "lat_min": -8.1622933,
+          "lat_max": -8.14047385,
+          "lon_min": -79.04853560000001,
+          "lon_max": -79.0267821
+        },
+        {
+          "zona": "Zona_21",
+          "lat_min": -8.14047385,
+          "lat_max": -8.1186544,
+          "lon_min": -79.0702891,
+          "lon_max": -79.04853560000001
+        },
+        {
+          "zona": "Zona_22",
+          "lat_min": -8.14047385,
+          "lat_max": -8.1186544,
+          "lon_min": -79.04853560000001,
+          "lon_max": -79.0267821
+        }
+      ]
+    },
+    "Medio": {
+      "place": "La Esperanza, Trujillo, Peru",
+      "lat_min": -8.0876055,
+      "lat_max": -8.0395625,
+      "lon_min": -79.0861445,
+      "lon_max": -79.0300722,
+      "center_lat": -8.0633115,
+      "center_lon": -79.0590158,
+      "display_name": "La Esperanza, Trujillo, La Libertad, Perú",
+      "subdivisiones": [
+        {
+          "zona": "Zona_11",
+          "lat_min": -8.0876055,
+          "lat_max": -8.063584,
+          "lon_min": -79.0861445,
+          "lon_max": -79.05810835
+        },
+        {
+          "zona": "Zona_12",
+          "lat_min": -8.0876055,
+          "lat_max": -8.063584,
+          "lon_min": -79.05810835,
+          "lon_max": -79.0300722
+        },
+        {
+          "zona": "Zona_21",
+          "lat_min": -8.063584,
+          "lat_max": -8.0395625,
+          "lon_min": -79.0861445,
+          "lon_max": -79.05810835
+        },
+        {
+          "zona": "Zona_22",
+          "lat_min": -8.063584,
+          "lat_max": -8.0395625,
+          "lon_min": -79.05810835,
+          "lon_max": -79.0300722
+        }
+      ]
+    },
+    "Bajo": {
+      "place": "El Porvenir, Trujillo, Peru",
+      "lat_min": -8.0897832,
+      "lat_max": -8.0141837,
+      "lon_min": -79.0362402,
+      "lon_max": -78.9532305,
+      "center_lat": -8.0516808,
+      "center_lon": -79.0016911,
+      "display_name": "El Porvenir, Trujillo, La Libertad, Perú",
+      "subdivisiones": [
+        {
+          "zona": "Zona_11",
+          "lat_min": -8.0897832,
+          "lat_max": -8.05198345,
+          "lon_min": -79.0362402,
+          "lon_max": -78.99473535
+        },
+        {
+          "zona": "Zona_12",
+          "lat_min": -8.0897832,
+          "lat_max": -8.05198345,
+          "lon_min": -78.99473535,
+          "lon_max": -78.9532305
+        },
+        {
+          "zona": "Zona_21",
+          "lat_min": -8.05198345,
+          "lat_max": -8.0141837,
+          "lon_min": -79.0362402,
+          "lon_max": -78.99473535
+        },
+        {
+          "zona": "Zona_22",
+          "lat_min": -8.05198345,
+          "lat_max": -8.0141837,
+          "lon_min": -78.99473535,
+          "lon_max": -78.9532305
+        }
+      ]
+    }
+  },
+  "PIURA": {
+    "Alto": {
+      "place": "Castilla, Piura, Peru",
+      "lat_min": -5.2650312,
+      "lat_max": -4.9655215,
+      "lon_min": -80.6491622,
+      "lon_max": -80.3380684,
+      "center_lat": -5.115365,
+      "center_lon": -80.5340462,
+      "display_name": "Castilla, Piura, Perú",
+      "subdivisiones": [
+        {
+          "zona": "Zona_11",
+          "lat_min": -5.2650312,
+          "lat_max": -5.11527635,
+          "lon_min": -80.6491622,
+          "lon_max": -80.4936153
+        },
+        {
+          "zona": "Zona_12",
+          "lat_min": -5.2650312,
+          "lat_max": -5.11527635,
+          "lon_min": -80.4936153,
+          "lon_max": -80.3380684
+        },
+        {
+          "zona": "Zona_21",
+          "lat_min": -5.11527635,
+          "lat_max": -4.9655215,
+          "lon_min": -80.6491622,
+          "lon_max": -80.4936153
+        },
+        {
+          "zona": "Zona_22",
+          "lat_min": -5.11527635,
+          "lat_max": -4.9655215,
+          "lon_min": -80.4936153,
+          "lon_max": -80.3380684
+        }
+      ]
+    },
+    "Medio": {
+      "place": "Catacaos, Piura, Peru",
+      "lat_min": -5.8112441,
+      "lat_max": -5.1514946,
+      "lon_min": -80.8009922,
+      "lon_max": -79.9685391,
+      "center_lat": -5.2654817,
+      "center_lon": -80.6760774,
+      "display_name": "Catacaos, Piura, 20006, Perú",
+      "subdivisiones": [
+        {
+          "zona": "Zona_11",
+          "lat_min": -5.8112441,
+          "lat_max": -5.48136935,
+          "lon_min": -80.8009922,
+          "lon_max": -80.38476564999999
+        },
+        {
+          "zona": "Zona_12",
+          "lat_min": -5.8112441,
+          "lat_max": -5.48136935,
+          "lon_min": -80.38476564999999,
+          "lon_max": -79.9685391
+        },
+        {
+          "zona": "Zona_21",
+          "lat_min": -5.48136935,
+          "lat_max": -5.1514946,
+          "lon_min": -80.8009922,
+          "lon_max": -80.38476564999999
+        },
+        {
+          "zona": "Zona_22",
+          "lat_min": -5.48136935,
+          "lat_max": -5.1514946,
+          "lon_min": -80.38476564999999,
+          "lon_max": -79.9685391
+        }
+      ]
+    },
+    "Bajo": {
+      "place": "26 de Octubre, Piura, Peru",
+      "lat_min": -5.2189362,
+      "lat_max": -5.1176084,
+      "lon_min": -80.7677679,
+      "lon_max": -80.6391058,
+      "center_lat": -5.1682992,
+      "center_lon": -80.6856017,
+      "display_name": "26 de Octubre, Piura, Perú",
+      "subdivisiones": [
+        {
+          "zona": "Zona_11",
+          "lat_min": -5.2189362,
+          "lat_max": -5.1682723,
+          "lon_min": -80.7677679,
+          "lon_max": -80.70343685
+        },
+        {
+          "zona": "Zona_12",
+          "lat_min": -5.2189362,
+          "lat_max": -5.1682723,
+          "lon_min": -80.70343685,
+          "lon_max": -80.6391058
+        },
+        {
+          "zona": "Zona_21",
+          "lat_min": -5.1682723,
+          "lat_max": -5.1176084,
+          "lon_min": -80.7677679,
+          "lon_max": -80.70343685
+        },
+        {
+          "zona": "Zona_22",
+          "lat_min": -5.1682723,
+          "lat_max": -5.1176084,
+          "lon_min": -80.70343685,
+          "lon_max": -80.6391058
+        }
+      ]
+    }
+  }
+}
